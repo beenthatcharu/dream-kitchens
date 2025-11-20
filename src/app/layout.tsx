@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: 'wise-oaks-admission',
-  description: 'Shape Your Child\'s Future at DPS Bharuch. Admissions for 2026-27 are now open.',
+  description: 'Shape Your Child\'s Future at Wise Oaks. Admissions for 2026-27 are now open.',
 };
 
 export default function RootLayout({
