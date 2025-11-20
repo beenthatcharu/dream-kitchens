@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;               /* white */
+    --foreground: 240 10% 3.9%;            /* dark grey for text */
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --primary: 220 90% 42%;                /* deep blue ~ #1E3A8A or so */
+    --primary-foreground: 0 0% 100%;       /* white text on blue */
+
+    --accent: 0 80% 56%;                   /* bold red ~ #E03131 or so */
+    --accent-foreground: 0 0% 100%;
+
+    --secondary: 210 17% 98%;              /* light grey (unchanged) */
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 100%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+
+    --ring: 220 90% 42%;                   /* blue ring focus */
+
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 212 30% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 212 30% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --primary: 220 90% 46%;
+    --primary-foreground: 0 0% 100%;
+
+    --accent: 0 80% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --secondary: 212 30% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 212 30% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --ring: 220 90% 46%;
+
+    --border: 212 30% 20%;
+    --input: 212 30% 20%;
+
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Scrollbar & text-selection (you may keep your previous) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 2px;
+  z-index: 9999;
+  background: #ddd;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+}
+::selection {
+  background: hsl(var(--accent));
+  text-shadow: none;
+  color: #ffffff;
+}
