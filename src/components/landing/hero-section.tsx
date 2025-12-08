@@ -1,45 +1,64 @@
-import Image from 'next/image';
-import { InquiryForm } from '@/components/landing/inquiry-form';
+import Image from "next/image";
+import { InquiryForm } from "@/components/landing/inquiry-form";
 
 export default function HeroSection() {
   return (
     <section
       id="inquiry-form"
-      className="relative w-full flex items-center justify-center text-white py-24 md:py-16"
+      className="relative w-full flex items-center justify-center text-white 
+                 py-32 md:py-40 lg:py-48 overflow-hidden"
     >
-      {/* 🔹 Background Image */}
+      {/* Background Image */}
       <Image
         src="https://res.cloudinary.com/dtc8bbbco/image/upload/v1763618118/Upper_bukit_timah_road_1_icp22b.jpg"
-        alt="School Building"
+        alt="Dream Kitchens Background"
         fill
-        className="object-cover"
         priority
+        className="object-cover scale-110"
       />
 
-      {/* Dark overlay */}
+      {/* Premium Multi-Layer Overlay */}
       <div className="absolute inset-0 bg-black/70" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent" />
+      <div className="absolute inset-0 backdrop-blur-[2px]" />
 
-      <div className="relative container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="flex flex-col gap-6 text-center md:text-left">
+      {/* Content */}
+      <div className="relative container mx-auto px-6 lg:px-10">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
 
-            {/* ✅ Updated Heading */}
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold font-headline leading-tight tracking-tight">
-              Singapore’s Most Affordable Indian School Offering the Cambridge Curriculum
+          {/* LEFT SIDE */}
+          <div className="flex flex-col gap-6 animate-fadeInUp">
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold font-headline 
+                           leading-tight tracking-tight drop-shadow-2xl">
+
+              <span className="block">Premium Modular Kitchens.</span>
+
+              <span className="block text-blue-400">
+                Smart-Budget Planning.
+              </span>
+
+              <span className="block mt-4 text-2xl md:text-3xl lg:text-4xl 
+                               font-semibold text-yellow-300 drop-shadow">
+                German Quality • Made to Order • Designer Finish
+              </span>
             </h1>
 
-            {/* ✅ Added Subheading */}
-            <p className="text-lg md:text-xl text-slate-200 leading-relaxed">
-              Delivering global Cambridge standards with a strong Indian foundation to help every child learn, grow, and excel.
+            <p className="text-lg md:text-xl text-slate-200 leading-relaxed max-w-xl drop-shadow">
+              Perfect for clients who want a premium home without overspending.
             </p>
-
           </div>
 
-          <div className="w-full max-w-md mx-auto">
-            <InquiryForm />
+          {/* RIGHT SIDE — FORM BOX */}
+          <div className="w-full max-w-md mx-auto animate-fadeIn">
+            <div className="bg-white/10 backdrop-blur-xl p-6 md:p-8 rounded-2xl shadow-2xl border border-white/20">
+              <InquiryForm />
+            </div>
           </div>
+
         </div>
       </div>
     </section>
   );
 }
+

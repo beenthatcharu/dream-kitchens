@@ -9,6 +9,13 @@ import { Loader2 } from 'lucide-react';
 const IMAGES_PER_PAGE = 6;
 
 export default function GallerySection() {
+
+  // ❌ Entire section disabled safely
+  return null;
+
+  // ⬇️ Original code kept below safely commented out (NOT deleted)
+
+  /*
   const galleryImages = PlaceHolderImages.filter(p => p.id.startsWith('gallery-'));
   const [visibleImages, setVisibleImages] = useState(IMAGES_PER_PAGE);
   const [loading, setLoading] = useState(false);
@@ -18,7 +25,7 @@ export default function GallerySection() {
     setTimeout(() => {
       setVisibleImages(prev => prev + IMAGES_PER_PAGE);
       setLoading(false);
-    }, 500); // Simulate network delay
+    }, 500);
   };
 
   const imagesToShow = galleryImages.slice(0, visibleImages);
@@ -27,9 +34,11 @@ export default function GallerySection() {
     <section className="py-16 md:py-24 bg-muted">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">Life at Wise Oaks International School</h2>
-         
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">
+            Life at Wise Oaks International School
+          </h2>
         </div>
+
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {imagesToShow.map((image, index) => (
             <div key={image.id} className="relative aspect-video overflow-hidden rounded-lg shadow-lg group">
@@ -47,8 +56,8 @@ export default function GallerySection() {
             </div>
           ))}
         </div>
-   
       </div>
     </section>
   );
+  */
 }

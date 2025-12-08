@@ -21,6 +21,7 @@
       "description": " Receive your admission offer and officially join the DPS Bharuch family."
     }
   ],
+
   "faqs": [
     {
       "question": "What curriculum does Wise Oaks follow?",
@@ -39,27 +40,49 @@
       "answer": "  Through WiseTech CodeSpark, students engage in coding, robotics, app development, digital literacy, AI/ML basics, and hands-on STEM activities from an early age."
     }
   ],
+
   "testimonials": [
     {
-      "quote": "Wise Oaks provides the perfect balance of academics and holistic growth. Our child enjoys going to school every day, and the teachers truly understand each learner’s individual needs.",
-      "author": " Parent of Grade 3 Student"
+      "quote": "We give premium look without making them feel they chose something cheap.",
+      "author": " "
     }
   ],
+
   "whyChooseUsFeatures": [
     {
-      "icon": "BrainCircuit",
-      "title": "Academic Excellence",
-      "description": " Our Cambridge pathway nurtures conceptual understanding, critical thinking, and global-mindedness — empowering students to excel in an ever-evolving world."
+      "icon": "Factory",
+      "title": "German-Style Design Workflow",
+      "description": "We follow a precision-based German-style modular kitchen design workflow."
     },
     {
-      "icon": "HeartHandshake",
-      "title": "Holistic Development",
-      "description": " From sports and performing arts to technology, communication, and leadership, we ensure every learner grows with confidence, creativity, and character."
+      "icon": "Hammer",
+      "title": "HDHMR & Soft-Close Hardware",
+      "description": "Durable HDHMR boards paired with high-quality soft-close hinges and channels for long-lasting performance."
     },
     {
-      "icon": "Users",
-      "title": "Dedicated Faculty",
-      "description": " Our experienced educators offer personalised attention in small class sizes, creating a warm, supportive environment where every child thrives."
+      "icon": "Sparkles",
+      "title": "Premium-Looking Finishes",
+      "description": "Choose from premium laminate, acrylic, and PU finishes that elevate the look of your kitchen."
+    },
+    {
+      "icon": "BadgePercent",
+      "title": "Optimised Pricing",
+      "description": "Smart, optimised pricing ensures great value without compromising on material quality or finish."
+    },
+    {
+      "icon": "Award",
+      "title": "20+ Years of Experience",
+      "description": "With decades of expertise, our team ensures flawless planning, execution, and attention to detail."
+    },
+    {
+      "icon": "MessageCircle",
+      "title": "Free Design Consultation",
+      "description": "Our experts help you visualise your dream kitchen with detailed layouts, insights, and material advice."
+    },
+    {
+      "icon": "Wrench",
+      "title": "In-House Installation & After-Sales",
+      "description": "Our trained in-house team handles installation and provides dependable after-sales support — no outsourcing."
     }
   ]
 }

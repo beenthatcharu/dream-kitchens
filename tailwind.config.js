@@ -8,55 +8,81 @@ export default {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    container: {
-      center: true,
-      padding: '2rem',
-      screens: {
-        '2xl': '1400px',
-      },
-    },
     extend: {
       fontFamily: {
-        body: ['Poppins', 'sans-serif'],
-        headline: ['Poppins', 'sans-serif'],
+        body: ['"Montserrat"', 'sans-serif'],
+        headline: ['"Montserrat"', 'serif'],
         code: ['monospace'],
       },
-      colors: {
-        background: '#F5F5F5', // Light gray background (same as site bg)
-        foreground: '#1E1E1E', // Dark text
 
+      // ==== 🎨 DREAM KITCHENS BRAND COLORS APPLIED HERE ====
+      colors: {
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+
+        // MAIN BRAND COLORS FROM LOGO
         primary: {
-          DEFAULT: '#00205B', // Deep Navy Blue (brand color)
-          foreground: '#ffffff', // White text on blue
-          hover: '#001844', // Slightly darker blue for hover
-          active: '#000F2D', // Active state
+          DEFAULT: '#2A2CC8', // BLUE
+          foreground: '#FFFFFF',
         },
         secondary: {
-          DEFAULT: '#E3B505', // Golden yellow (accent)
-          hover: '#CFA304',
-          active: '#B89103',
-          foreground: '#1E1E1E', // Dark text on yellow
+          DEFAULT: '#E60000', // RED
+          foreground: '#FFFFFF',
         },
         accent: {
-          DEFAULT: '#F5F5F5', // Soft gray section backgrounds
-          foreground: '#00205B',
+          DEFAULT: '#F5DD00', // YELLOW
+          foreground: '#1A1A1A',
         },
-        border: '#DADADA', // Neutral gray
-        input: '#EDEDED',
-        ring: '#00205B', // Blue focus ring
 
-        // Custom Named Brand Colors
-        wiseBlue: '#00205B',
-        wiseBlueHover: '#001844',
-        wiseYellow: '#E3B505',
-        wiseGray: '#F5F5F5',
-        wiseText: '#1E1E1E',
+        // Old system still supported
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
+        },
+        destructive: {
+          DEFAULT: '#E60000',
+          foreground: '#FFFFFF',
+        },
+        card: {
+          DEFAULT: '#FFFFFF',
+          foreground: '#1A1A1A',
+        },
+        popover: {
+          DEFAULT: '#FFFFFF',
+          foreground: '#1A1A1A',
+        },
+
+        border: '#1A1A1A',
+        input: '#1A1A1A',
+        ring: '#2A2CC8', // Add brand blue as ring highlight
+
+        chart: {
+          '1': '#2A2CC8', // Blue
+          '2': '#E60000', // Red
+          '3': '#F5DD00', // Yellow
+          '4': '#1A1A1A', // Dark
+          '5': '#FFFFFF', // Light
+        },
+
+        // Not needed but kept for compatibility
+        sidebar: {
+          DEFAULT: '#FFFFFF',
+          foreground: '#1A1A1A',
+          primary: '#2A2CC8',
+          'primary-foreground': '#FFFFFF',
+          accent: '#F5DD00',
+          'accent-foreground': '#1A1A1A',
+          border: '#1A1A1A',
+          ring: '#2A2CC8',
+        },
       },
+
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+
       keyframes: {
         'accordion-down': {
           from: { height: '0' },

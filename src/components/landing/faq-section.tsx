@@ -4,6 +4,11 @@ import content from '@/lib/content.json';
 const { faqs } = content;
 
 export default function faqSection() {
+  // ❌ FAQ section disabled
+  return null;
+
+  // ⬇️ Original FAQ code safely preserved (NOT deleted)
+  /*
   return (
     <section className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
@@ -25,4 +30,5 @@ export default function faqSection() {
       </div>
     </section>
   );
+  */
 }

@@ -87,7 +87,7 @@ export function InquiryForm() { // renamed from InquiryFormUI for consistency
                   name="parentName"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Parent's Full Name</FormLabel>
+                      <FormLabel>Full Name</FormLabel>
                       <FormControl>
                         <Input placeholder="e.g. Your Name" {...field} />
                       </FormControl>
@@ -113,7 +113,7 @@ export function InquiryForm() { // renamed from InquiryFormUI for consistency
                   name="mobileNumber"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Mobile Number</FormLabel>
+                      <FormLabel>Phone Number</FormLabel>
                       <FormControl>
                         <Input type="tel" placeholder="e.g. 9876543210" {...field} />
                       </FormControl>
