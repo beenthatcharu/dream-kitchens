@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white backdrop-blur supports-[backdrop-filter]:bg-white/100">
-      <div className="container flex h-24 items-center justify-between">
+      <div className="container flex h-20 md:h-24 items-center justify-between">
 
         {/* Logo */}
         <Link href="/" className="flex items-center">
@@ -13,15 +13,18 @@ export default function Header() {
             alt="Dream Kitchen Logo"
             width={200}
             height={100}
-            className="object-contain"
+            className="object-contain w-[150px] h-auto md:w-[200px]" 
             priority
           />
         </Link>
 
-        {/* 📞 Clickable Phone Number */}
+        {/* 📞 Phone Number */}
         <a
           href="tel:+919403893424"
-          className="text-primary font-semibold text-lg hover:underline flex items-center gap-2"
+          className="text-primary font-semibold 
+                     text-sm sm:text-base md:text-lg 
+                     hover:underline flex items-center 
+                     gap-1 sm:gap-2"
         >
           <span>📞</span> +91 94038 93424
         </a>
@@ -30,5 +33,3 @@ export default function Header() {
     </header>
   );
 }
-
-
