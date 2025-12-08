@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white backdrop-blur supports-[backdrop-filter]:bg-white/100">
-      <div className="container flex h-20 md:h-24 items-center justify-between px-2">
+      <div className="container flex flex-col sm:flex-row items-center justify-between py-2 sm:h-24">
 
         {/* Logo */}
         <Link href="/" className="flex items-center">
@@ -13,7 +13,7 @@ export default function Header() {
             alt="Dream Kitchen Logo"
             width={200}
             height={100}
-            className="object-contain w-[130px] sm:w-[160px] md:w-[200px] h-auto"
+            className="object-contain w-[150px] h-auto sm:w-[200px]"
             priority
           />
         </Link>
@@ -22,8 +22,8 @@ export default function Header() {
         <a
           href="tel:+919403893424"
           className="text-primary font-semibold 
-                     text-xs sm:text-sm md:text-lg 
-                     hover:underline flex items-center gap-1 sm:gap-2 whitespace-nowrap"
+                     text-base sm:text-lg 
+                     hover:underline flex items-center gap-1 sm:gap-2 mt-1 sm:mt-0"
         >
           <span>📞</span> +91 94038 93424
         </a>
