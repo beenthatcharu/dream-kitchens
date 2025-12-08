@@ -1,6 +1,5 @@
-import type { Config } from 'tailwindcss';
-
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   darkMode: ['class'],
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -15,26 +14,23 @@ export default {
         code: ['monospace'],
       },
 
-      // ==== 🎨 DREAM KITCHENS BRAND COLORS APPLIED HERE ====
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
 
-        // MAIN BRAND COLORS FROM LOGO
         primary: {
-          DEFAULT: '#2A2CC8', // BLUE
+          DEFAULT: '#2A2CC8',
           foreground: '#FFFFFF',
         },
         secondary: {
-          DEFAULT: '#E60000', // RED
+          DEFAULT: '#E60000',
           foreground: '#FFFFFF',
         },
         accent: {
-          DEFAULT: '#F5DD00', // YELLOW
+          DEFAULT: '#F5DD00',
           foreground: '#1A1A1A',
         },
 
-        // Old system still supported
         muted: {
           DEFAULT: 'hsl(var(--muted))',
           foreground: 'hsl(var(--muted-foreground))',
@@ -54,17 +50,16 @@ export default {
 
         border: '#1A1A1A',
         input: '#1A1A1A',
-        ring: '#2A2CC8', // Add brand blue as ring highlight
+        ring: '#2A2CC8',
 
         chart: {
-          '1': '#2A2CC8', // Blue
-          '2': '#E60000', // Red
-          '3': '#F5DD00', // Yellow
-          '4': '#1A1A1A', // Dark
-          '5': '#FFFFFF', // Light
+          1: '#2A2CC8',
+          2: '#E60000',
+          3: '#F5DD00',
+          4: '#1A1A1A',
+          5: '#FFFFFF',
         },
 
-        // Not needed but kept for compatibility
         sidebar: {
           DEFAULT: '#FFFFFF',
           foreground: '#1A1A1A',
@@ -93,6 +88,7 @@ export default {
           to: { height: '0' },
         },
       },
+
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
@@ -100,4 +96,4 @@ export default {
     },
   },
   plugins: [require('tailwindcss-animate')],
-} satisfies Config;
+};
