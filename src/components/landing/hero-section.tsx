@@ -4,7 +4,6 @@ import { InquiryForm } from "@/components/landing/inquiry-form";
 export default function HeroSection() {
   return (
     <section
-      id="inquiry-form"
       className="relative w-full flex items-center justify-center text-white 
                  py-32 md:py-40 lg:py-48 overflow-hidden"
     >
@@ -29,7 +28,6 @@ export default function HeroSection() {
           {/* LEFT SIDE */}
           <div className="flex flex-col gap-6 animate-fadeInUp">
 
-            {/* Luxury Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold font-headline 
                            leading-tight tracking-tight drop-shadow-2xl">
 
@@ -39,21 +37,22 @@ export default function HeroSection() {
                 Smart-Budget Planning.
               </span>
 
-              {/* Subheadline - Yellow Removed */}
               <span className="block mt-4 text-2xl md:text-3xl lg:text-4xl 
                                font-semibold text-blue-300/90 drop-shadow-lg">
                 German Quality • Made to Order • Designer Finish
               </span>
             </h1>
 
-            {/* Supporting Text */}
             <p className="text-lg md:text-xl text-slate-200 leading-relaxed max-w-xl drop-shadow">
               Perfect for clients who want a premium home without overspending.
             </p>
           </div>
 
-          {/* RIGHT SIDE — GLASSMORPHIC FORM CARD */}
-          <div className="w-full max-w-md mx-auto animate-fadeIn">
+          {/* RIGHT SIDE — ⭐ FORM TARGET (THIS ID IS IMPORTANT) */}
+          <div
+            id="inquiry-form-target"
+            className="w-full max-w-md mx-auto animate-fadeIn"
+          >
             <div className="bg-white/10 backdrop-blur-2xl p-6 md:p-8 rounded-2xl 
                             shadow-[0_8px_30px_rgb(0,0,0,0.35)] border border-white/20">
               <InquiryForm />
