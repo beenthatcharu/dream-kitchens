@@ -7,22 +7,24 @@ export default function FloatingInquiryButton() {
     const form = document.getElementById("inquiry-form-exact");
     if (!form) return;
 
+    // Header height detection
     const header = document.querySelector("header");
     const headerHeight = header ? header.offsetHeight : 70;
 
-    const floating = document.getElementById("floating-btn-bar");
-    const floatingHeight = floating ? floating.offsetHeight : 70;
+    // Floating button bar height
+    const floatBar = document.getElementById("floating-btn-bar");
+    const floatHeight = floatBar ? floatBar.offsetHeight : 70;
 
-    // EXACT scroll position
-    const targetY =
-      form.getBoundingClientRect().top +
-      window.scrollY -
+    // ⭐ Final accurate position calculation
+    const finalY =
+      window.scrollY +
+      form.getBoundingClientRect().top -
       headerHeight -
-      floatingHeight -
-      10;
+      20; // small buffer only
 
+    // Scroll to the form
     window.scrollTo({
-      top: targetY,
+      top: finalY,
       behavior: "smooth",
     });
   };

@@ -44,12 +44,13 @@ export default function HeroSection() {
           </div>
 
           {/* RIGHT SIDE — ⭐ FINAL SCROLL TARGET */}
-          <div
-            id="inquiry-form-exact"
-            className="w-full max-w-md mx-auto animate-fadeIn"
-          >
-            <div className="bg-white/10 backdrop-blur-2xl p-6 md:p-8 rounded-2xl 
-                            shadow-[0_8px_30px_rgb(0,0,0,0.35)] border border-white/20"
+          <div className="w-full max-w-md mx-auto animate-fadeIn">
+            {/* EXACT SCROLL TARGET */}
+            <div id="inquiry-form-exact"></div>
+
+            <div
+              className="bg-white/10 backdrop-blur-2xl p-6 md:p-8 rounded-2xl 
+                         shadow-[0_8px_30px_rgb(0,0,0,0.35)] border border-white/20"
             >
               <InquiryForm />
             </div>
@@ -60,4 +61,3 @@ export default function HeroSection() {
     </section>
   );
 }
-
