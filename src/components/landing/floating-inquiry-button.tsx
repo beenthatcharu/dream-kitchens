@@ -4,26 +4,27 @@ import { Button } from "@/components/ui/button";
 
 export default function FloatingInquiryButton() {
   const scrollToForm = () => {
-    const form = document.getElementById("inquiry-form");
+    const form = document.getElementById("inquiry-form-exact");
     if (!form) return;
 
-    // First smooth scroll to the form
-    form.scrollIntoView({ behavior: "smooth", block: "start" });
+    const header = document.querySelector("header");
+    const headerHeight = header ? header.offsetHeight : 70;
 
-    // Adjust scroll AFTER the animation completes
-    setTimeout(() => {
-      const header = document.querySelector("header");
-      const headerHeight = header ? header.offsetHeight : 70;
+    const floating = document.getElementById("floating-btn-bar");
+    const floatingHeight = floating ? floating.offsetHeight : 70;
 
-      const floatingBtn = document.getElementById("floating-btn-bar");
-      const btnHeight = floatingBtn ? floatingBtn.offsetHeight : 70;
+    // EXACT scroll position
+    const targetY =
+      form.getBoundingClientRect().top +
+      window.scrollY -
+      headerHeight -
+      floatingHeight -
+      10;
 
-      // Final adjustment
-      window.scrollBy({
-        top: -(headerHeight + btnHeight + 10),
-        behavior: "smooth",
-      });
-    }, 500); // delay ensures scrollIntoView completes fully
+    window.scrollTo({
+      top: targetY,
+      behavior: "smooth",
+    });
   };
 
   return (

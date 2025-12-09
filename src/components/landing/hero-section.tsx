@@ -16,7 +16,7 @@ export default function HeroSection() {
         className="object-cover scale-110"
       />
 
-      {/* Luxury Overlays */}
+      {/* Overlays */}
       <div className="absolute inset-0 bg-black/70" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
       <div className="absolute inset-0 backdrop-blur-[2px]" />
@@ -27,15 +27,10 @@ export default function HeroSection() {
 
           {/* LEFT SIDE */}
           <div className="flex flex-col gap-6 animate-fadeInUp">
-
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold font-headline 
                            leading-tight tracking-tight drop-shadow-2xl">
-
-              <span className="block">Premium Modular Kitchens.</span>
-
-              <span className="block text-primary">
-                Smart-Budget Planning.
-              </span>
+              <span>Premium Modular Kitchens.</span>
+              <span className="block text-primary">Smart-Budget Planning.</span>
 
               <span className="block mt-4 text-2xl md:text-3xl lg:text-4xl 
                                font-semibold text-blue-300/90 drop-shadow-lg">
@@ -48,13 +43,14 @@ export default function HeroSection() {
             </p>
           </div>
 
-          {/* RIGHT SIDE — ⭐ FORM TARGET (THIS ID IS IMPORTANT) */}
+          {/* RIGHT SIDE — ⭐ FINAL SCROLL TARGET */}
           <div
-            id="inquiry-form-target"
+            id="inquiry-form-exact"
             className="w-full max-w-md mx-auto animate-fadeIn"
           >
             <div className="bg-white/10 backdrop-blur-2xl p-6 md:p-8 rounded-2xl 
-                            shadow-[0_8px_30px_rgb(0,0,0,0.35)] border border-white/20">
+                            shadow-[0_8px_30px_rgb(0,0,0,0.35)] border border-white/20"
+            >
               <InquiryForm />
             </div>
           </div>
@@ -64,5 +60,4 @@ export default function HeroSection() {
     </section>
   );
 }
-
 
