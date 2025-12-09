@@ -1,103 +1,67 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ['class'],
+  darkMode: ["class"],
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       fontFamily: {
-        body: ['"Montserrat"', 'sans-serif'],
-        headline: ['"Montserrat"', 'serif'],
-        code: ['monospace'],
+        body: ['"Montserrat"', "sans-serif"],
+        headline: ['"Montserrat"', "serif"],
       },
 
       colors: {
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
+        background: "#0B0B0B", // Dark black base
+        foreground: "#F5F5F5", // Soft white
 
         primary: {
-          DEFAULT: '#2A2CC8',
-          foreground: '#FFFFFF',
+          DEFAULT: "#D4AF37", // Gold
+          foreground: "#000000",
         },
         secondary: {
-          DEFAULT: '#E60000',
-          foreground: '#FFFFFF',
+          DEFAULT: "#ffffff1a", // Soft white overlay
+          foreground: "#ffffff",
         },
 
-        // 🔵 Accent Updated (Yellow Removed)
         accent: {
-          DEFAULT: '#3B4BFF',           // Light Blue Accent
-          foreground: '#FFFFFF',
+          DEFAULT: "#D4AF37", // Gold accent
+          foreground: "#000000",
         },
 
         muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
+          DEFAULT: "#1A1A1A", 
+          foreground: "#CFCFCF",
         },
-        destructive: {
-          DEFAULT: '#E60000',
-          foreground: '#FFFFFF',
-        },
+
         card: {
-          DEFAULT: '#FFFFFF',
-          foreground: '#1A1A1A',
-        },
-        popover: {
-          DEFAULT: '#FFFFFF',
-          foreground: '#1A1A1A',
+          DEFAULT: "#121212",
+          foreground: "#F5F5F5",
         },
 
-        border: '#1A1A1A',
-        input: '#1A1A1A',
-        ring: '#2A2CC8',
-
-        // 🔵 Chart Yellow Removed
-        chart: {
-          1: '#2A2CC8',
-          2: '#E60000',
-          3: '#3B4BFF',     // replaced yellow
-          4: '#1A1A1A',
-          5: '#FFFFFF',
-        },
-
-        // 🔵 Sidebar Yellow Removed
-        sidebar: {
-          DEFAULT: '#FFFFFF',
-          foreground: '#1A1A1A',
-          primary: '#2A2CC8',
-          'primary-foreground': '#FFFFFF',
-          accent: '#3B4BFF',                  // replaced yellow
-          'accent-foreground': '#FFFFFF',
-          border: '#1A1A1A',
-          ring: '#2A2CC8',
-        },
+        border: "#3A3A3A",
+        ring: "#D4AF37", // Gold ring
       },
 
       borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
-      },
-
-      keyframes: {
-        'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' },
-        },
-        'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' },
-        },
+        lg: "12px",
+        md: "10px",
+        sm: "8px",
       },
 
       animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
+        fadeIn: "fadeIn 1s ease-in-out",
+      },
+
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [require("tailwindcss-animate")],
 };

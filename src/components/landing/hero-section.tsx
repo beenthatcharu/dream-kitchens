@@ -31,14 +31,17 @@ export default function HeroSection() {
               <span>Premium Modular Kitchens.</span>
               <span className="block text-primary">Smart-Budget Planning.</span>
 
-              <span className="block mt-4 text-2xl md:text-3xl lg:text-4xl 
-                               font-semibold text-blue-300/90 drop-shadow-lg">
+              {/* ⭐ UPDATED TO GOLD COLOR */}
+              <span
+                className="block mt-4 text-2xl md:text-3xl lg:text-4xl 
+                           font-semibold text-[#D4AF37] drop-shadow-lg"
+              >
                 German Quality • Made to Order • Designer Finish
               </span>
             </h1>
 
             <p className="text-lg md:text-xl text-slate-200 leading-relaxed max-w-xl drop-shadow">
-              Perfect for clients who want a premium home without overspending.
+            
             </p>
           </div>
 

@@ -3,27 +3,40 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white backdrop-blur supports-[backdrop-filter]:bg-white/100">
-      <div className="container flex flex-col sm:flex-row items-center justify-between py-2 sm:h-24">
-
-        {/* Logo */}
-        <Link href="/" className="flex items-center">
+    <header
+      className="
+        sticky top-0 z-50 w-full 
+        border-b border-gray-200
+        bg-white
+      "
+    >
+      <div className="
+        container 
+        flex flex-col items-center justify-center
+        py-2
+      ">
+        
+        {/* ⭐ Centered + Smaller Logo */}
+        <Link href="/" className="flex items-center justify-center">
           <Image
             src="https://res.cloudinary.com/dtc8bbbco/image/upload/q_100,f_auto/v1765193669/logo2_cueg8i_h6hnt5.png"
             alt="Dream Kitchen Logo"
-            width={200}
-            height={100}
-            className="object-contain w-[150px] h-auto sm:w-[200px]"
+            width={140}      // ⭐ Smaller Logo
+            height={70}
+            className="object-contain"
             priority
           />
         </Link>
 
-        {/* Phone Number */}
+        {/* ⭐ Phone Number Below Logo */}
         <a
           href="tel:+919403893424"
-          className="text-primary font-semibold 
-                     text-base sm:text-lg 
-                     hover:underline flex items-center gap-1 sm:gap-2 mt-1 sm:mt-0"
+          className="
+            text-primary font-semibold 
+            text-sm sm:text-base 
+            hover:underline 
+            flex items-center gap-1 mt-1
+          "
         >
           <span>📞</span> +91 94038 93424
         </a>

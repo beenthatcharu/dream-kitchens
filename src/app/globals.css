@@ -2,73 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* --------------------------------------------------------- */
-/* 🔧 FIX: Remove Mobile Tap Highlight (Blue/Yellow Glow Bug) */
-/* --------------------------------------------------------- */
+/* Remove mobile highlight */
 * {
   -webkit-tap-highlight-color: transparent;
 }
 
 @layer base {
-  :root {
-    /* ------------------------------- */
-    /* 🔷 DREAM KITCHENS THEME SYSTEM  */
-    /* ------------------------------- */
-
-    /* BACKGROUND / TEXT */
-    --background: 0 0% 99%;
-    --foreground: 0 0% 8%;
-
-    /* CARD / POPOVER */
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 8%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 8%;
-
-    /* BRAND COLORS */
-    --primary: 231 65% 50%;  /* Blue */
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 0 100% 45%; /* Red */
-    --secondary-foreground: 0 0% 100%;
-
-    /* ACCENT → Soft Blue (Yellow removed completely) */
-    --accent: 231 100% 63%;
-    --accent-foreground: 0 0% 100%;
-
-    /* MUTED (Grey tones) */
-    --muted: 0 0% 90%;
-    --muted-foreground: 0 0% 35%;
-
-    --destructive: 0 85% 45%;
-    --destructive-foreground: 0 0% 100%;
-
-    /* BORDER / RING */
-    --border: 0 0% 75%;
-    --input: 0 0% 70%;
-    --ring: 231 65% 50%;
-
-    /* RADIUS */
-    --radius: 0.6rem;
-
-    /* CHART COLORS */
-    --chart-1: 231 65% 50%;
-    --chart-2: 0 100% 45%;
-    --chart-3: 231 100% 63%;
-    --chart-4: 0 0% 15%;
-    --chart-5: 0 0% 100%;
-
-    /* SIDEBAR */
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 0 0% 8%;
-    --sidebar-primary: 231 65% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 231 100% 63%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 75%;
-    --sidebar-ring: 231 65% 50%;
-  }
-
   html {
     @apply scroll-smooth;
   }
@@ -77,6 +16,7 @@
     @apply bg-background text-foreground;
   }
 
+  /* Soft border everywhere */
   * {
     @apply border-border;
   }
