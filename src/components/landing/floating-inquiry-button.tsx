@@ -7,19 +7,21 @@ export default function FloatingInquiryButton() {
     const form = document.getElementById("inquiry-form-exact");
     if (!form) return;
 
-    // Header height
-    const header = document.querySelector("header");
-    const headerHeight = header ? header.offsetHeight : 70;
+    const headerHeight =
+      document.querySelector("header")?.offsetHeight || 80;
 
-    // ⭐ Final accurate position
-    const finalY =
-      window.scrollY +
-      form.getBoundingClientRect().top -
+    const floatingHeight =
+      document.getElementById("floating-btn-bar")?.offsetHeight || 70;
+
+    // ⭐ FINAL PERFECT SCROLL POSITION
+    const y =
+      form.getBoundingClientRect().top +
+      window.scrollY -
       headerHeight -
-      20; // clean buffer
+      10;
 
     window.scrollTo({
-      top: finalY,
+      top: y,
       behavior: "smooth",
     });
   };

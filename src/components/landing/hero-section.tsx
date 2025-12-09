@@ -16,7 +16,7 @@ export default function HeroSection() {
         className="object-cover scale-110"
       />
 
-      {/* Overlays */}
+      {/* Overlay Layers */}
       <div className="absolute inset-0 bg-black/70" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
       <div className="absolute inset-0 backdrop-blur-[2px]" />
@@ -25,10 +25,9 @@ export default function HeroSection() {
       <div className="relative container mx-auto px-6 lg:px-10">
         <div className="grid md:grid-cols-2 gap-16 items-center">
 
-          {/* LEFT SIDE */}
+          {/* LEFT */}
           <div className="flex flex-col gap-6 animate-fadeInUp">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold font-headline 
-                           leading-tight tracking-tight drop-shadow-2xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold font-headline leading-tight tracking-tight drop-shadow-2xl">
               <span>Premium Modular Kitchens.</span>
               <span className="block text-primary">Smart-Budget Planning.</span>
 
@@ -43,11 +42,11 @@ export default function HeroSection() {
             </p>
           </div>
 
-          {/* RIGHT SIDE — ⭐ FINAL SCROLL TARGET */}
+          {/* RIGHT — ⭐ FINAL SCROLL TARGET */}
           <div className="w-full max-w-md mx-auto animate-fadeIn">
 
-            {/* ⭐ EXACT SCROLL TARGET (Placed just above the card) */}
-            <div id="inquiry-form-exact"></div>
+            {/* ⭐ Correct scroll target */}
+            <div id="inquiry-form-exact" className="h-[2px]"></div>
 
             {/* FORM CARD */}
             <div
