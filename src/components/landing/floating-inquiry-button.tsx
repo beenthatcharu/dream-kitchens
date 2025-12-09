@@ -7,17 +7,19 @@ export default function FloatingInquiryButton() {
     const el = document.getElementById("inquiry-form");
     if (!el) return;
 
-    // Header ki real height detect karna
-    const header = document.querySelector("header");
-    const headerHeight = header ? header.offsetHeight : 80;
+    // Step 1 – Scroll exactly to the form first
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
 
-    // Form ka exact Y coordinate
-    const formTop = el.getBoundingClientRect().top + window.scrollY;
+    // Step 2 – After smooth scroll ends, adjust position for header height
+    setTimeout(() => {
+      const header = document.querySelector("header");
+      const headerHeight = header ? header.offsetHeight : 80;
 
-    window.scrollTo({
-      top: formTop - headerHeight - 10, // ⭐ Extra 10px smooth spacing
-      behavior: "smooth",
-    });
+      window.scrollBy({
+        top: -headerHeight - 10,
+        behavior: "smooth",
+      });
+    }, 350); // delay ensures scrollIntoView completes
   };
 
   return (
