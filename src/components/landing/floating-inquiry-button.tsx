@@ -4,36 +4,28 @@ import { Button } from "@/components/ui/button";
 
 export default function FloatingInquiryButton() {
   const scrollToForm = () => {
-    const form = document.getElementById("inquiry-form");
-    if (!form) return;
+    const el = document.getElementById("inquiry-form");
+    if (!el) return;
 
-    // Sticky header height
-    const headerHeight = document.querySelector("header")?.offsetHeight || 0;
+    // Header ki real height detect karna
+    const header = document.querySelector("header");
+    const headerHeight = header ? header.offsetHeight : 80;
 
-    // Exact Y position of the form
-    const formY = form.offsetTop - headerHeight - 12;
+    // Form ka exact Y coordinate
+    const formTop = el.getBoundingClientRect().top + window.scrollY;
 
     window.scrollTo({
-      top: formY,
+      top: formTop - headerHeight - 10, // ⭐ Extra 10px smooth spacing
       behavior: "smooth",
     });
   };
 
   return (
-    <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-background/95 backdrop-blur-sm border-t z-40">
+    <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-background/95 backdrop-blur border-t z-40">
       <Button
         size="lg"
+        className="w-full bg-primary hover:bg-primary/90 text-white font-bold text-lg py-6 rounded-full"
         onClick={scrollToForm}
-        className="
-          w-full bg-accent text-accent-foreground font-bold
-          text-lg py-6 rounded-full shadow-lg
-          hover:bg-accent/90 active:bg-accent/80
-          transition-all duration-300
-        "
-        style={{
-          WebkitTapHighlightColor: "transparent",
-          WebkitTouchCallout: "none",
-        }}
       >
         Enquire Now
       </Button>
