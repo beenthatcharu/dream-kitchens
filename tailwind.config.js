@@ -26,9 +26,11 @@ module.exports = {
           DEFAULT: '#E60000',
           foreground: '#FFFFFF',
         },
+
+        // 🔵 Accent Updated (Yellow Removed)
         accent: {
-          DEFAULT: '#F5DD00',
-          foreground: '#1A1A1A',
+          DEFAULT: '#3B4BFF',           // Light Blue Accent
+          foreground: '#FFFFFF',
         },
 
         muted: {
@@ -52,21 +54,23 @@ module.exports = {
         input: '#1A1A1A',
         ring: '#2A2CC8',
 
+        // 🔵 Chart Yellow Removed
         chart: {
           1: '#2A2CC8',
           2: '#E60000',
-          3: '#F5DD00',
+          3: '#3B4BFF',     // replaced yellow
           4: '#1A1A1A',
           5: '#FFFFFF',
         },
 
+        // 🔵 Sidebar Yellow Removed
         sidebar: {
           DEFAULT: '#FFFFFF',
           foreground: '#1A1A1A',
           primary: '#2A2CC8',
           'primary-foreground': '#FFFFFF',
-          accent: '#F5DD00',
-          'accent-foreground': '#1A1A1A',
+          accent: '#3B4BFF',                  // replaced yellow
+          'accent-foreground': '#FFFFFF',
           border: '#1A1A1A',
           ring: '#2A2CC8',
         },

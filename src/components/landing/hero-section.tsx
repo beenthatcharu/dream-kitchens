@@ -17,9 +17,9 @@ export default function HeroSection() {
         className="object-cover scale-110"
       />
 
-      {/* Premium Multi-Layer Overlay */}
+      {/* Luxury Overlays */}
       <div className="absolute inset-0 bg-black/70" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
       <div className="absolute inset-0 backdrop-blur-[2px]" />
 
       {/* Content */}
@@ -29,29 +29,33 @@ export default function HeroSection() {
           {/* LEFT SIDE */}
           <div className="flex flex-col gap-6 animate-fadeInUp">
 
+            {/* Luxury Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold font-headline 
                            leading-tight tracking-tight drop-shadow-2xl">
 
               <span className="block">Premium Modular Kitchens.</span>
 
-              <span className="block text-blue-400">
+              <span className="block text-primary">
                 Smart-Budget Planning.
               </span>
 
+              {/* Subheadline - Yellow Removed */}
               <span className="block mt-4 text-2xl md:text-3xl lg:text-4xl 
-                               font-semibold text-yellow-300 drop-shadow">
+                               font-semibold text-blue-300/90 drop-shadow-lg">
                 German Quality • Made to Order • Designer Finish
               </span>
             </h1>
 
+            {/* Supporting Text */}
             <p className="text-lg md:text-xl text-slate-200 leading-relaxed max-w-xl drop-shadow">
               Perfect for clients who want a premium home without overspending.
             </p>
           </div>
 
-          {/* RIGHT SIDE — FORM BOX */}
+          {/* RIGHT SIDE — GLASSMORPHIC FORM CARD */}
           <div className="w-full max-w-md mx-auto animate-fadeIn">
-            <div className="bg-white/10 backdrop-blur-xl p-6 md:p-8 rounded-2xl shadow-2xl border border-white/20">
+            <div className="bg-white/10 backdrop-blur-2xl p-6 md:p-8 rounded-2xl 
+                            shadow-[0_8px_30px_rgb(0,0,0,0.35)] border border-white/20">
               <InquiryForm />
             </div>
           </div>
@@ -61,4 +65,5 @@ export default function HeroSection() {
     </section>
   );
 }
+
 

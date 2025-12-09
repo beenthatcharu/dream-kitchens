@@ -12,12 +12,14 @@ export default function FinalCtaSection() {
 
   return (
     <section
-      className="relative py-16 md:py-24 lg:py-28 overflow-hidden
-                 bg-gradient-to-r from-primary to-blue-700 text-primary-foreground"
+      className="
+        relative py-16 md:py-24 lg:py-28 overflow-hidden
+        bg-gradient-to-r from-primary to-blue-700 text-primary-foreground
+      "
     >
-      {/* Glow Elements - Hidden on Mobile */}
-      <div className="hidden md:block absolute top-10 left-10 w-40 h-40 bg-yellow-300/30 blur-3xl rounded-full" />
-      <div className="hidden md:block absolute bottom-10 right-10 w-56 h-56 bg-white/20 blur-3xl rounded-full" />
+      {/* Glow Elements */}
+      <div className="hidden md:block absolute top-10 left-10 w-40 h-40 bg-blue-300/30 blur-3xl rounded-full" />
+      <div className="hidden md:block absolute bottom-10 right-10 w-56 h-56 bg-blue-100/30 blur-3xl rounded-full" />
 
       <div className="relative container mx-auto px-4 sm:px-6 text-center">
 
@@ -26,20 +28,18 @@ export default function FinalCtaSection() {
           Call Now for Free 3D Design + Smart Budget Planning
         </h2>
 
-        {/* ❌ SHARE LINE REMOVED */}
-
         {/* Required Note */}
         <p className="text-white/80 text-sm sm:text-base animate-fadeIn">
           Must have actual kitchen pics and videos for client engagement.
         </p>
 
-        {/* WhatsApp + Call Info */}
+        {/* WhatsApp + Call */}
         <div className="mt-4 flex flex-col sm:flex-row justify-center gap-3 text-sm sm:text-base animate-fadeIn">
 
           <a
             href="https://wa.me/919403893424"
             target="_blank"
-            className="text-yellow-300 font-semibold hover:underline"
+            className="text-accent-foreground font-semibold hover:underline"
           >
             📩 WhatsApp: +91 94038 93424
           </a>
@@ -48,7 +48,7 @@ export default function FinalCtaSection() {
 
           <a
             href="tel:+919403893424"
-            className="text-yellow-300 font-semibold hover:underline"
+            className="text-accent-foreground font-semibold hover:underline"
           >
             📞 Call: +91 94038 93424
           </a>
@@ -64,13 +64,13 @@ export default function FinalCtaSection() {
             px-6 sm:px-10 py-4 sm:py-6
             rounded-full w-full sm:w-auto
             shadow-[0_10px_30px_rgba(0,0,0,0.25)]
-            hover:bg-yellow-300 hover:scale-[1.05]
+            hover:bg-accent/90 hover:scale-[1.05]
             transition-all duration-300 animate-fadeIn
+            focus:ring-0 focus-visible:ring-0 focus:outline-none
           "
         >
           Enquire Now
         </Button>
-
       </div>
     </section>
   );

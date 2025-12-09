@@ -2,67 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Remove mobile tap highlight (button yellow tap issue fix) */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 @layer base {
   :root {
     /* ------------------------------- */
     /* 🔷 DREAM KITCHENS THEME SYSTEM  */
     /* ------------------------------- */
 
-    /* APP BACKGROUND / TEXT */
-    --background: 0 0% 99%;        /* Slight off-white for premium UI */
-    --foreground: 0 0% 8%;         /* Rich dark grey, not pure black */
+    /* BACKGROUND / TEXT */
+    --background: 0 0% 99%;
+    --foreground: 0 0% 8%;
 
     /* CARD / POPOVER */
-    --card: 0 0% 100%;             /* Pure white cards */
-    --card-foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 0 0% 8%;
 
     /* BRAND COLORS */
-
-    /* PRIMARY → BLUE (#2A2CC8) */
-    --primary: 231 65% 50%;
+    --primary: 231 65% 50%; /* Blue */
     --primary-foreground: 0 0% 100%;
 
-    /* SECONDARY → RED (#E60000) */
-    --secondary: 0 100% 45%;
+    --secondary: 0 100% 45%; /* Red */
     --secondary-foreground: 0 0% 100%;
 
-    /* ACCENT → YELLOW (#F5DD00) */
-    --accent: 54 100% 48%;
-    --accent-foreground: 0 0% 10%;
+    /* ACCENT → Soft Blue (Yellow fully removed) */
+    --accent: 231 100% 63%;
+    --accent-foreground: 0 0% 100%;
 
-    /* MUTED → GREYS FOR SUBTEXT */
-    --muted: 0 0% 92%;
+    /* MUTED → Greys */
+    --muted: 0 0% 90%;
     --muted-foreground: 0 0% 35%;
 
-    /* ERROR / ALERT / DANGER */
     --destructive: 0 85% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    /* BORDER & INPUT STYLING */
-    --border: 0 0% 80%;          /* Softer border */
-    --input: 0 0% 75%;           /* Light grey input border */
-    --ring: 231 65% 50%;         /* Blue highlight ring */
+    --border: 0 0% 75%;
+    --input: 0 0% 70%;
+    --ring: 231 65% 50%; /* Brand Blue */
 
-    /* ELEMENT RADIUS */
     --radius: 0.6rem;
 
-    /* CHART COLORS (Brand-aligned) */
-    --chart-1: 231 65% 50%;   /* Blue */
-    --chart-2: 0 100% 45%;    /* Red */
-    --chart-3: 54 100% 48%;   /* Yellow */
-    --chart-4: 0 0% 15%;      /* Deep grey */
-    --chart-5: 0 0% 100%;     /* White */
+    /* Charts (no yellow) */
+    --chart-1: 231 65% 50%;
+    --chart-2: 0 100% 45%;
+    --chart-3: 231 100% 63%;
+    --chart-4: 0 0% 15%;
+    --chart-5: 0 0% 100%;
 
-    /* SIDEBAR COLORS */
+    /* Sidebar colors */
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 0 0% 8%;
     --sidebar-primary: 231 65% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 54 100% 48%;
-    --sidebar-accent-foreground: 0 0% 10%;
-    --sidebar-border: 0 0% 80%;
+    --sidebar-accent: 231 100% 63%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 75%;
     --sidebar-ring: 231 65% 50%;
   }
 
