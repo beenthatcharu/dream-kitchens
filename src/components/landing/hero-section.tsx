@@ -45,9 +45,11 @@ export default function HeroSection() {
 
           {/* RIGHT SIDE — ⭐ FINAL SCROLL TARGET */}
           <div className="w-full max-w-md mx-auto animate-fadeIn">
-            {/* EXACT SCROLL TARGET */}
+
+            {/* ⭐ EXACT SCROLL TARGET (Placed just above the card) */}
             <div id="inquiry-form-exact"></div>
 
+            {/* FORM CARD */}
             <div
               className="bg-white/10 backdrop-blur-2xl p-6 md:p-8 rounded-2xl 
                          shadow-[0_8px_30px_rgb(0,0,0,0.35)] border border-white/20"
