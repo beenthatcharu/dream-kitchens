@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Remove mobile tap highlight (button yellow tap issue fix) */
+/* --------------------------------------------------------- */
+/* 🔧 FIX: Remove Mobile Tap Highlight (Blue/Yellow Glow Bug) */
+/* --------------------------------------------------------- */
 * {
   -webkit-tap-highlight-color: transparent;
 }
@@ -24,37 +26,39 @@
     --popover-foreground: 0 0% 8%;
 
     /* BRAND COLORS */
-    --primary: 231 65% 50%; /* Blue */
+    --primary: 231 65% 50%;  /* Blue */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 0 100% 45%; /* Red */
     --secondary-foreground: 0 0% 100%;
 
-    /* ACCENT → Soft Blue (Yellow fully removed) */
+    /* ACCENT → Soft Blue (Yellow removed completely) */
     --accent: 231 100% 63%;
     --accent-foreground: 0 0% 100%;
 
-    /* MUTED → Greys */
+    /* MUTED (Grey tones) */
     --muted: 0 0% 90%;
     --muted-foreground: 0 0% 35%;
 
     --destructive: 0 85% 45%;
     --destructive-foreground: 0 0% 100%;
 
+    /* BORDER / RING */
     --border: 0 0% 75%;
     --input: 0 0% 70%;
-    --ring: 231 65% 50%; /* Brand Blue */
+    --ring: 231 65% 50%;
 
+    /* RADIUS */
     --radius: 0.6rem;
 
-    /* Charts (no yellow) */
+    /* CHART COLORS */
     --chart-1: 231 65% 50%;
     --chart-2: 0 100% 45%;
     --chart-3: 231 100% 63%;
     --chart-4: 0 0% 15%;
     --chart-5: 0 0% 100%;
 
-    /* Sidebar colors */
+    /* SIDEBAR */
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 0 0% 8%;
     --sidebar-primary: 231 65% 50%;
@@ -68,13 +72,12 @@
   html {
     @apply scroll-smooth;
   }
-}
 
-@layer base {
-  * {
-    @apply border-border;
-  }
   body {
     @apply bg-background text-foreground;
+  }
+
+  * {
+    @apply border-border;
   }
 }
