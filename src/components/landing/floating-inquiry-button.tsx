@@ -3,9 +3,18 @@
 import { Button } from "@/components/ui/button";
 
 export default function floatingInquiryButton() {
-  const scrollToTop = () => {
+  const scrollToForm = () => {
+    const el = document.getElementById("inquiry-form");
+
+    if (!el) return;
+
+    // Sticky header ka height adjust karlo (80px dono mobile/desktop me safe hai)
+    const headerHeight = document.querySelector("header")?.offsetHeight || 80;
+
+    const y = el.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
     window.scrollTo({
-      top: 0,
+      top: y,
       behavior: "smooth",
     });
   };
@@ -15,7 +24,7 @@ export default function floatingInquiryButton() {
       <Button
         size="lg"
         className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg py-6 rounded-full"
-        onClick={scrollToTop}
+        onClick={scrollToForm}   {/* ⭐ Updated */}
       >
         Enquire Now
       </Button>
